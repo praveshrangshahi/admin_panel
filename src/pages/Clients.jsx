@@ -387,8 +387,7 @@ const Clients = () => {
                                                     </div>
                                                     <div>
                                                         <div className="text-sm font-bold text-gray-700">{client.matchName}</div>
-                                                        {/* Placeholder for vehicles count */}
-                                                        <div className="text-[10px] font-bold text-gray-400">0 Vehicles</div>
+                                                        <div className="text-[10px] font-bold text-gray-400">{client.vehicleCount || 0} Vehicles</div>
                                                     </div>
                                                 </div>
                                             </td>

@@ -6,7 +6,7 @@ import { useAuth } from '@/context/AuthContext';
 import api, { getFileUrl } from '@/services/api';
 
 const Header = ({ isCollapsed, scrolled }) => {
-    const { user, selectedBranch, updateSelectedBranch } = useAuth();
+    const { user, selectedBranch, updateSelectedBranch, logout } = useAuth();
     const navigate = useNavigate();
     const [isHovered, setIsHovered] = useState(false);
     const [yards, setYards] = useState([]);
@@ -113,7 +113,7 @@ const Header = ({ isCollapsed, scrolled }) => {
     };
 
     const handleLogout = () => {
-        localStorage.removeItem('token');
+        logout();
         navigate('/login');
     };
 

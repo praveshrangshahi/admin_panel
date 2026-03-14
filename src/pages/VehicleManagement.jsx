@@ -41,6 +41,7 @@ const VehicleManagement = () => {
         clientId: '',
         repoAgent: '',
         status: 'PARKED',
+        category: '', // Added category
         entryDate: new Date().toISOString().split('T')[0],
         branchId: ''
     });
@@ -136,6 +137,7 @@ const VehicleManagement = () => {
             clientId: '',
             repoAgent: '',
             status: 'PARKED',
+            category: '', // Added category
             entryDate: new Date().toISOString().split('T')[0],
             branchId: (selectedBranch && selectedBranch !== 'ALL') ? selectedBranch : ''
         });
@@ -155,6 +157,7 @@ const VehicleManagement = () => {
             clientId: foundClient?._id || '',
             repoAgent: vehicle.repoAgent,
             status: vehicle.status.toUpperCase(),
+            category: vehicle.category || '', // Added category
             entryDate: new Date(vehicle.date).toISOString().split('T')[0],
             branchId: vehicle.branchId || '' // Set branchId for edit
         });

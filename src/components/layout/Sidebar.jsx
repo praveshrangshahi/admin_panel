@@ -65,8 +65,7 @@ const Sidebar = () => {
 
             {/* Navigation Links (Floating Circles) */}
             <TooltipProvider>
-                <div className="space-y-3 flex-1 w-full flex flex-col items-center pointer-events-auto overflow-y-auto min-h-0 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:'none']">
-
+                <div className="space-y-4 flex-1 w-full flex flex-col items-center pointer-events-auto overflow-y-visible py-4">
                     {filteredNavItems.map((item) => (
                         <NavLink
                             key={item.path}
@@ -82,7 +81,7 @@ const Sidebar = () => {
                         >
                             <item.icon className="h-5 w-5 transition-transform duration-300 group-hover:rotate-3" />
 
-                            <span className="absolute left-16 z-50 whitespace-nowrap rounded-full bg-white/90 backdrop-blur text-teal-900 px-4 py-1.5 text-xs font-bold opacity-0 shadow-[0_8px_30px_rgb(0,0,0,0.12)] transition-all duration-300 translate-x-3 scale-90 group-hover:translate-x-0 group-hover:scale-100 group-hover:opacity-100 pointer-events-none border border-white/50">
+                            <span className="absolute left-[calc(100%+12px)] z-[100] whitespace-nowrap rounded-lg bg-teal-900 text-white px-3 py-1.5 text-xs font-semibold shadow-xl transition-all duration-300 translate-x-3 scale-90 opacity-0 group-hover:translate-x-0 group-hover:scale-100 group-hover:opacity-100 pointer-events-none after:content-[''] after:absolute after:right-full after:top-1/2 after:-translate-y-1/2 after:border-8 after:border-transparent after:border-r-teal-900">
                                 {item.name}
                             </span>
                         </NavLink>
